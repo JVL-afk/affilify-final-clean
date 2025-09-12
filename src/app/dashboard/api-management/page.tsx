@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
+import { Button } from '../../../components/ui/button';
+import { Input } from '../../../components/ui/input';
 import { Key, Plus, Copy, Eye, EyeOff, Trash2, Settings, BarChart3, Shield, Clock, CheckCircle, AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface ApiKey {

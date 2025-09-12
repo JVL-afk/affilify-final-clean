@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { Button } from '../../components/ui/button'
+import { Button } from '../../../components/ui/button'
 import { 
   Zap,
   LayoutDashboard,
