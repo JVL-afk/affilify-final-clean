@@ -6,9 +6,11 @@ import { selectImagesForWebsite } from '../../lib/unsplash'
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
+    
     // Get token from cookies
     const token = request.cookies.get('auth-token')?.value
 
@@ -38,7 +40,7 @@ export async function POST(
     }
 
     // Get website
-    const website = await getWebsiteById(params.id, user.id)
+    const website = await getWebsiteById(id, user.id)
     if (!website) {
       return NextResponse.json(
         { error: 'Website not found' },
@@ -87,7 +89,7 @@ export async function POST(
     }
 
     // Update website with deployment URL
-    const updateSuccess = await updateWebsite(params.id, user.id, {
+    const updateSuccess = await updateWebsite(id, user.id, {
       status: 'published',
       url: deploymentUrl,
       updatedAt: new Date()

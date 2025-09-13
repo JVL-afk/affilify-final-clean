@@ -4,9 +4,10 @@ import { publishWebsite } from '../../lib/database'
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     // Get token from cookies
     const token = request.cookies.get('auth-token')?.value
 
@@ -36,7 +37,7 @@ export async function POST(
     }
 
     // Publish website
-    const url = await publishWebsite(params.id, user.id)
+    const url = await publishWebsite(id, user.id)
     if (!url) {
       return NextResponse.json(
         { error: 'Failed to publish website' },

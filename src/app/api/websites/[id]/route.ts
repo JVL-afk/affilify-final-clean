@@ -4,9 +4,10 @@ import { getWebsiteById, updateWebsite, deleteWebsite, publishWebsite } from '..
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     // Get token from cookies
     const token = request.cookies.get('auth-token')?.value
 
@@ -36,7 +37,7 @@ export async function GET(
     }
 
     // Get website
-    const website = await getWebsiteById(params.id, user.id)
+    const website = await getWebsiteById(id, user.id)
     if (!website) {
       return NextResponse.json(
         { error: 'Website not found' },
@@ -59,9 +60,10 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     // Get token from cookies
     const token = request.cookies.get('auth-token')?.value
 
@@ -94,7 +96,7 @@ export async function PUT(
     const updates = await request.json()
 
     // Update website
-    const success = await updateWebsite(params.id, user.id, updates)
+    const success = await updateWebsite(id, user.id, updates)
     if (!success) {
       return NextResponse.json(
         { error: 'Failed to update website' },
@@ -117,9 +119,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     // Get token from cookies
     const token = request.cookies.get('auth-token')?.value
 
@@ -149,7 +152,7 @@ export async function DELETE(
     }
 
     // Delete website
-    const success = await deleteWebsite(params.id, user.id)
+    const success = await deleteWebsite(id, user.id)
     if (!success) {
       return NextResponse.json(
         { error: 'Failed to delete website' },
