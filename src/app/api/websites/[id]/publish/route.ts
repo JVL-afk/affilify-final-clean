@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyToken, getUserById } from '../../lib/auth'
-import { publishWebsite } from '../../lib/database'
+import { verifyToken, getUserById } from '@/lib/auth'
+import { publishWebsite } from '@/lib/database'
 
 export async function POST(
   request: NextRequest,

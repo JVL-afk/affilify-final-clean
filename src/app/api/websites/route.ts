@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyToken, getUserById } from '../../lib/auth'
-import { getUserWebsites } from '../../lib/database'
+import { verifyToken, getUserById } from '@/lib/auth'
+import { getUserWebsites } from '@/lib/database'
 
 export async function GET(request: NextRequest) {
   try {

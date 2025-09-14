@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyToken, getUserById, incrementUserAnalyses } from '../../lib/auth'
-import { analyzeWebsite } from '../../lib/ai'
-import { saveAnalysis } from '../../lib/database'
-import { validateUrl } from '../../lib/utils'
+import { verifyToken, getUserById, incrementUserAnalyses } from '@/lib/auth'
+import { analyzeWebsite } from '@/lib/ai'
+import { saveAnalysis } from '@/lib/database'
+import { validateUrl } from '@/lib/utils'
 
 export async function POST(request: NextRequest) {
   try {

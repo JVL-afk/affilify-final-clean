@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyToken, getUserById } from '../../lib/auth'
-import { getWebsiteById, updateWebsite } from '../../lib/database'
-import { deployWebsiteToNetlify } from '../../lib/netlify'
-import { selectImagesForWebsite } from '../../lib/unsplash'
+import { verifyToken, getUserById } from '@/lib/auth'
+import { getWebsiteById, updateWebsite } from '@/lib/database'
+import { deployWebsiteToNetlify } from '@/lib/netlify'
+import { selectImagesForWebsite } from '@/lib/unsplash'
 
 export async function POST(
   request: NextRequest,

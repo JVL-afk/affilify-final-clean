@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendGridService } from '../../lib/sendgrid';
-import { zapierService } from '../../lib/zapier';
-import { microsoftClarity } from '../../lib/microsoft-clarity';
-import { googleAnalytics } from '../../lib/google-analytics';
+import { sendGridService } from '@/lib/sendgrid';
+import { zapierService } from '@/lib/zapier';
+import { microsoftClarity } from '@/lib/microsoft-clarity';
+import { googleAnalytics } from '@/lib/google-analytics';
 
 export async function POST(request: NextRequest) {
   try {

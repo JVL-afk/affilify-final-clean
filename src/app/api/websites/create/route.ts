@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyToken, getUserById, incrementUserWebsites } from '../../lib/auth'
-import { generateWebsiteContent } from '../../lib/ai'
-import { saveWebsite } from '../../lib/database'
-import { validateUrl } from '../../lib/utils'
+import { verifyToken, getUserById, incrementUserWebsites } from '@/lib/auth'
+import { generateWebsiteContent } from '@/lib/ai'
+import { saveWebsite } from '@/lib/database'
+import { validateUrl } from '@/lib/utils'
 
 export async function POST(request: NextRequest) {
   try {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendGridService } from '../../lib/sendgrid';
+import { sendGridService } from '@/lib/sendgrid';
 
 export async function POST(request: NextRequest) {
   try {

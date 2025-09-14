@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { googleAnalytics } from '../../lib/google-analytics';
+import { googleAnalytics } from '@/lib/google-analytics';
 
 export async function GET(request: NextRequest) {
   try {
