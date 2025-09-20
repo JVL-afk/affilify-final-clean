@@ -62,7 +62,7 @@ async function analyzeProductURL(url: string) {
 
 // Generate REAL website content using Gemini AI
 async function generateWebsiteContent(productInfo: any) {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
   
   const prompt = `
 Create a HIGH-CONVERTING affiliate marketing website for this product:
