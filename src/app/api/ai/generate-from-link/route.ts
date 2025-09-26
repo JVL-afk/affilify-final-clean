@@ -65,43 +65,175 @@ async function generateWebsiteContent(productInfo: any) {
   const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
   
   const prompt = `
-Create a HIGH-CONVERTING affiliate marketing website for this product:
 
+🚨 ULTIMATE WEBSITE CREATION MISSION 🚨
+
+You are the world's most elite affiliate marketing strategist, conversion optimization expert, and web developer. Your mission is LIFE-CHANGING: create a website that WILL generate $1000+ in the first week.
+
+**CRITICAL SUCCESS FACTORS:**
+- This website will determine someone's financial future
+- Every element must be strategically optimized for conversions
+- Use institutional-grade marketing psychology
+- Implement proven profit-generation strategies
+
+**PRODUCT ANALYSIS:**
 Product: ${productInfo.title}
 Description: ${productInfo.description}
 Price: ${productInfo.price}
 Affiliate Link: ${productInfo.originalUrl}
 
-Generate COMPLETE HTML with embedded CSS that includes:
+## 🎯 PHASE 1: STRATEGIC ANALYSIS & POSITIONING
 
-1. PROFESSIONAL DESIGN:
-   - Modern, clean layout
-   - Orange gradient background (like AFFILIFY branding)
-   - Mobile-responsive design
-   - Professional typography
+### TARGET AUDIENCE DEEP PROFILING:
+- Identify primary demographics and psychographics
+- Map pain points and emotional triggers
+- Understand buying motivations and objections
+- Analyze competitor positioning and gaps
 
-2. CONVERSION-OPTIMIZED CONTENT:
-   - Compelling headline that creates urgency
-   - 3-5 key product benefits with emotional triggers
-   - Social proof section with testimonials
-   - Strong call-to-action buttons
-   - Money-back guarantee section
-   - Limited time offer messaging
+### VALUE PROPOSITION OPTIMIZATION:
+- Craft compelling unique selling proposition
+- Highlight competitive advantages and benefits
+- Address specific customer pain points
+- Create urgency and scarcity messaging
 
-3. TECHNICAL REQUIREMENTS:
-   - Proper meta tags for SEO
-   - Fast-loading CSS (embedded)
-   - Click tracking JavaScript
-   - Mobile-optimized layout
-   - Professional color scheme
+## 🏗️ PHASE 2: CONVERSION-OPTIMIZED ARCHITECTURE
 
-4. AFFILIATE MARKETING ELEMENTS:
-   - Multiple CTA buttons linking to: ${productInfo.originalUrl}
-   - Urgency and scarcity messaging
-   - Trust signals and guarantees
-   - Product benefits highlighting value
+### PROFESSIONAL DESIGN SYSTEM:
+- Modern, clean layout with AFFILIFY orange gradient branding
+- Mobile-first responsive design (60%+ mobile traffic)
+- Professional typography hierarchy for readability
+- Strategic color psychology for trust and action
+- Fast-loading optimized images and assets
 
-Return ONLY the complete HTML code. Make it production-ready and conversion-focused.
+### CONVERSION PSYCHOLOGY IMPLEMENTATION:
+- **Social Proof:** Testimonials, reviews, user counts, media mentions
+- **Authority:** Expert endorsements, certifications, awards
+- **Scarcity:** Limited time offers, stock counters, exclusive access
+- **Reciprocity:** Free resources, valuable content, bonuses
+- **Commitment:** Money-back guarantees, risk reversal
+
+### STRATEGIC CONTENT ARCHITECTURE:
+1. **Hero Section:** Compelling headline + subheadline + primary CTA
+2. **Problem Agitation:** Identify and amplify customer pain points
+3. **Solution Presentation:** Product benefits with emotional triggers
+4. **Social Proof Section:** Testimonials and success stories
+5. **Feature Benefits:** Transform features into customer benefits
+6. **Objection Handling:** FAQ section addressing concerns
+7. **Urgency Creation:** Limited time offers and scarcity
+8. **Risk Reversal:** Guarantees and return policies
+9. **Multiple CTAs:** Strategic placement throughout page
+10. **Trust Signals:** Security badges, certifications, contact info
+
+## 📈 PHASE 3: TRAFFIC & SEO OPTIMIZATION
+
+### TECHNICAL SEO EXCELLENCE:
+- Semantic HTML structure with proper headings
+- Meta tags optimized for target keywords
+- Schema markup for rich snippets
+- Fast-loading CSS and optimized images
+- Mobile-responsive and accessibility compliant
+
+### CONTENT SEO STRATEGY:
+- Target high-intent commercial keywords
+- Long-tail keyword integration
+- Internal linking structure
+- Content depth and value optimization
+- Local SEO elements if applicable
+
+## 💰 PHASE 4: REVENUE MAXIMIZATION SYSTEM
+
+### MULTIPLE CONVERSION PATHS:
+- Primary CTA: Direct product purchase
+- Secondary CTA: Email capture for nurturing
+- Tertiary CTA: Social media follow/share
+- Exit-intent popup with special offer
+- Retargeting pixel implementation
+
+### AFFILIATE LINK OPTIMIZATION:
+- Strategic placement of affiliate links
+- Multiple touchpoints throughout content
+- Disguised affiliate links for better conversion
+- Call-to-action button optimization
+- Link tracking and analytics setup
+
+### PSYCHOLOGICAL TRIGGERS:
+- Urgency: "Limited time offer expires in..."
+- Scarcity: "Only X left in stock"
+- Social proof: "Join 10,000+ satisfied customers"
+- Authority: "As seen on [media outlets]"
+- Fear of missing out: "Don't let this opportunity pass"
+
+## 🎨 PHASE 5: COMPLETE HTML GENERATION
+
+Generate COMPLETE, PRODUCTION-READY HTML with embedded CSS that includes:
+
+### HEADER SECTION:
+- Professional navigation with AFFILIFY branding
+- Trust badges and security indicators
+- Contact information for credibility
+
+### HERO SECTION:
+- Attention-grabbing headline with emotional hook
+- Compelling subheadline explaining benefits
+- High-quality product image or video
+- Primary CTA button with action-oriented text
+- Social proof indicators (customer count, ratings)
+
+### CONTENT SECTIONS:
+- Problem identification and agitation
+- Solution presentation with benefits focus
+- Feature breakdown with customer benefits
+- Social proof section with testimonials
+- Comparison table with competitors
+- FAQ section addressing objections
+- Guarantee and risk reversal section
+
+### FOOTER SECTION:
+- Contact information and support
+- Legal disclaimers and privacy policy
+- Additional trust signals and certifications
+- Secondary navigation and resources
+
+### TECHNICAL REQUIREMENTS:
+- Mobile-responsive design (Bootstrap or custom CSS Grid)
+- Fast-loading optimized CSS (embedded, no external dependencies)
+- Semantic HTML5 structure
+- Accessibility compliance (WCAG 2.1)
+- SEO-optimized meta tags and structure
+- Analytics tracking code placeholders
+- Social media sharing buttons
+- Email capture forms with validation
+
+### CONVERSION OPTIMIZATION:
+- Multiple strategically placed CTA buttons
+- Sticky header with CTA for mobile
+- Exit-intent popup trigger (JavaScript)
+- Scroll-based content reveals
+- Trust badge placement
+- Customer testimonial carousel
+- Product image gallery with zoom
+- Price comparison and savings calculator
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1. Complete HTML document with embedded CSS
+2. No external dependencies (all CSS/JS inline)
+3. Mobile-responsive and fast-loading
+4. Multiple conversion touchpoints
+5. Professional AFFILIFY branding integration
+6. SEO-optimized structure and content
+7. Psychological conversion triggers throughout
+8. Production-ready and deployment-ready
+
+**SUCCESS METRICS TO OPTIMIZE FOR:**
+- Conversion rate: Target 3-5%
+- Time on page: Target 2+ minutes
+- Bounce rate: Target <40%
+- Mobile usability: 100% responsive
+- Page load speed: <3 seconds
+- Trust indicators: Multiple throughout page
+
+This website MUST generate $1000+ in the first week. Every element should be strategically designed for maximum conversion and profit generation.
+
 `;
 
   try {
