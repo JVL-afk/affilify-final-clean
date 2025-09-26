@@ -212,7 +212,144 @@ export async function analyzeWebsite(url: string, analysisType: string = 'compre
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
     
     const prompt = `
-    You are an expert website analyst and SEO consultant. Analyze the website at ${url} and provide a comprehensive performance analysis.
+    🚨 CRITICAL MISSION: ULTIMATE AFFILIATE PROGRAM ANALYSIS 🚨
+
+You are the world's most elite affiliate marketing strategist and financial analyst. Your mission is LIFE-CHANGING: analyze this affiliate program with institutional-grade precision that will directly impact someone's financial future.
+
+**TARGET ANALYSIS:** ${url}
+
+## 🔍 PHASE 1: DEEP HISTORICAL ARCHAEOLOGY & DIGITAL FORENSICS
+
+### INTERNET ARCHIVE DEEP DIVE (WAYBACK MACHINE MASTERY):
+- Access EVERY available Wayback Machine snapshot from earliest record to present
+- Create month-by-month evolution timeline documenting ALL significant changes
+- Track website design evolution (amateur → professional indicates growth)
+- Document product/service evolution, pricing changes, and marketing claims
+- Research corporate milestones, funding, partnerships, and leadership changes
+- Identify patterns of growth, stagnation, decline, or concerning pivots
+
+### COMPREHENSIVE REPUTATION & SENTIMENT ANALYSIS:
+**Reddit Intelligence:** Search ALL relevant subreddits (r/entrepreneur, r/affiliatemarketing, r/passive_income, niche-specific)
+**Social Media Deep Dive:** Twitter/X mentions, Facebook reviews, LinkedIn professional analysis, YouTube content
+**Review Platform Analysis:** Trustpilot trends, G2/Capterra ratings, BBB complaints, Google Reviews
+**Forum Research:** Warrior Forum, STM Forum, AffiliateFix, BlackHatWorld, industry-specific communities
+**Affiliate Network Intelligence:** ShareASale feedback, CJ performance, ClickBank gravity, network discussions
+
+### TECHNICAL PERFORMANCE & CONVERSION ANALYSIS:
+**Google PageSpeed Insights Comprehensive Evaluation:**
+- Mobile Performance (60% weight): Core Web Vitals, FCP, LCP, FID, CLS, INP
+- Desktop Performance (40% weight): Speed Index, TTI, TBT, Performance Score
+- Accessibility Score (WCAG 2.1 compliance, screen reader compatibility)
+- Best Practices Score (HTTPS, security, modern standards)
+- SEO Score (meta tags, structured data, mobile-friendliness)
+- Calculate conversion impact from performance metrics
+
+### FINANCIAL VIABILITY & MARKET INTELLIGENCE:
+**Affiliate Program Deep Analysis:**
+- Commission structure, rates, tiers, bonuses, recurring vs one-time
+- Tracking technology: cookie duration, attribution models, fraud detection
+- Payment terms: thresholds, frequency, methods, reliability history
+- Program support: affiliate manager quality, marketing resources, training
+
+**Market & Competitive Intelligence:**
+- Identify 5-7 direct competitors with positioning analysis
+- Total Addressable Market (TAM) and growth projections
+- Industry benchmarks: conversion rates, commission standards
+- Search volume trends, social engagement, advertising competition
+
+**Financial Projections & ROI Modeling:**
+- EPC calculations with conservative/realistic/optimistic scenarios
+- Traffic source conversion rate estimations
+- Customer lifetime value and refund rate analysis
+- Seasonal patterns and geographic performance variations
+
+## 🎯 PHASE 2: ADVANCED RISK ASSESSMENT & RED FLAG DETECTION
+
+### CRITICAL RED FLAG ANALYSIS:
+**Financial Red Flags:** Payment delays, unrealistic promises, frequent pricing changes
+**Operational Red Flags:** Leadership instability, poor service, technical issues
+**Market Red Flags:** Declining engagement, negative sentiment, regulatory issues
+
+### SUSTAINABILITY ASSESSMENT:
+- Long-term viability and market position strength
+- Competitive moat and differentiation sustainability
+- Technology stack modernity and scalability
+- Financial stability and growth trajectory
+
+## 📊 PHASE 3: COMPREHENSIVE SCORING & ANALYSIS
+
+### SCORING METHODOLOGY:
+**Historical Stability Score (0-100):** 95-100: Decade+ growth | 85-94: Strong record | 65-84: Generally stable | 45-64: Multiple pivots | 25-44: Major red flags | 0-24: Avoid
+
+**Reputation Score (0-100):** 95-100: Industry leader | 85-94: Strong positive | 65-84: Generally positive | 45-64: Mixed reviews | 25-44: Reputation problems | 0-24: Toxic reputation
+
+**Technical Performance Score:** (0.5 × Mobile) + (0.2 × Accessibility) + (0.1 × Desktop) + (0.1 × Best Practices) + (0.1 × SEO)
+
+**Financial Viability Score (0-100):** Commission competitiveness (25%) + Payment reliability (25%) + Market opportunity (25%) + Program support (25%)
+
+**MAIN SCORE:** (Historical × 0.25) + (Reputation × 0.25) + (Technical × 0.25) + (Financial × 0.25)
+
+### COMPREHENSIVE JSON OUTPUT REQUIRED:
+{
+  "main_score": 85,
+  "component_scores": {
+    "historical_stability": 88,
+    "reputation_score": 82,
+    "technical_performance": 87,
+    "financial_viability": 83,
+    "pagespeed_score": 76
+  },
+  "financial_projections": {
+    "conservative_monthly_earnings": 500,
+    "realistic_monthly_earnings": 1200,
+    "optimistic_monthly_earnings": 2800,
+    "epc_estimate": 0.45,
+    "conversion_rate_estimate": "2.3%"
+  },
+  "risk_assessment": {
+    "overall_risk_level": "Low",
+    "red_flags": [],
+    "sustainability_score": 85,
+    "market_stability": "High"
+  },
+  "competitive_analysis": {
+    "market_position": "Strong",
+    "competitive_advantages": ["advantage1", "advantage2"],
+    "commission_competitiveness": "Above Average",
+    "market_share_estimate": "15-20%"
+  },
+  "why_its_special": "Detailed explanation of unique value proposition and competitive advantages",
+  "target_audience": {
+    "primary_demographics": "Professionals aged 25-45",
+    "pain_points": ["problem1", "problem2"],
+    "buying_motivations": ["motivation1", "motivation2"]
+  },
+  "traffic_sources": {
+    "recommended_channels": ["SEO", "Social Media", "Paid Ads"],
+    "channel_effectiveness": {"seo": "High", "social": "Medium", "paid": "High"}
+  },
+  "strategic_recommendations": [
+    "Specific actionable recommendation 1",
+    "Specific actionable recommendation 2",
+    "Specific actionable recommendation 3"
+  ],
+  "ai_generated_summary": "A comprehensive 200-word summary in 7th-grade vocabulary explaining the product/service, benefits, market position, and promotion rationale. Include PhD-level insights presented simply.",
+  "profit_maximization_tips": [
+    "Specific conversion optimization tip",
+    "Traffic optimization strategy", 
+    "Seasonal promotion timing",
+    "Audience targeting refinement"
+  ]
+}
+
+**CRITICAL SUCCESS FACTORS:**
+1. Use REAL data from actual research - no assumptions
+2. Provide specific, actionable insights with exact numbers
+3. Reference specific sources and evidence
+4. Deliver institutional-grade analysis quality
+5. Focus on practical profit generation strategies
+
+This analysis will determine someone's financial success. Make it count.You are an expert website analyst and SEO consultant. Analyze the website at ${url} and provide a comprehensive performance analysis.
     
     Evaluate these key areas:
     1. SEO optimization (meta tags, keywords, structure, mobile-friendliness)
